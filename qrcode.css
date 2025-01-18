@@ -1,28 +1,22 @@
 html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%; /* Ensure the body takes the full height */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Enable flexbox on the body */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     background-color: rgba(213, 225, 239, 1); /* Light blue background */
 }
 
 .container {
-    max-width: 280px; /* Reduced width */
-    width: 80%; /* Keeps responsiveness */
-    height: auto; /* Allows height to adjust dynamically */
-    padding: 12px; /* Reduced padding */
-    border-radius: 16px; /* Slightly smaller corner rounding */
+    height: 499px;
+    width: 320px;
+    padding: 16px;
+    border-radius: 20px;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly subtler shadow */
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.container:hover {
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 .qr-code-component {
@@ -33,62 +27,42 @@ html, body {
 }
 
 .qr-image {
-    max-width: 260px; /* Reduced width for QR code */
-    width: 100%; /* Stays responsive */
-    height: auto; /* Ensures proportional resizing */
-    border-radius: 8px; /* Reduced corner rounding */
+    height: 320px;
+    width: 320px;
+    border: none;
+    border-radius: 10px;
     object-fit: cover;
 }
 
-.improve, .instruction {
+.improve,.instruction {
     font-family: "Outfit", serif;
+   
     margin-left: 20px;
     margin-right: 20px;
-    line-height: 1.4;
 }
 
 .improve {
     font-weight: 700; /* Make the text bold */
-    font-size: 20px; /* Slightly smaller text */
-    color: #333333; /* Darker color for better contrast */
-    margin-top: 12px;
+    font-size: 22px;
+    color: #4A4A4A; /* Darker text color for better readability */
+    margin-top: 15px;
 }
 
 .instruction {
     font-weight: 400; /* Normal font weight */
-    color: #555555; /* Slightly darker gray for visibility */
-    font-size: 14px; /* Slightly smaller text */
-    margin-top: 8px;
+    color: gray;
+    font-size: 16px;
+   
+    margin-top: 10px;
 }
-
 @media (max-width: 768px) {
     .container {
-        width: 90%; /* Keeps responsiveness for small screens */
-        padding: 10px;
-    }
-
-    .qr-image {
-        max-width: 100%;
+        width: 90%;
         height: auto;
     }
 
-    .improve, .instruction {
-        margin-left: 8px;
-        margin-right: 8px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .container {
-        width: 350px;
-        padding: 20px;
-    }
-
-    .improve {
-        font-size: 24px;
-    }
-
-    .instruction {
-        font-size: 18px;
+    .qr-image {
+        width: 100%;
+        height: auto;
     }
 }
