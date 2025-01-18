@@ -4,19 +4,20 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(213, 225, 239, 1);
+    background-color: rgba(213, 225, 239, 1); /* Light blue background */
 }
 
 .container {
-    max-width: 320px;
-    width: 90%;
-    padding: 16px;
-    border-radius: 20px;
+    max-width: 280px; /* Reduced width */
+    width: 80%; /* Keeps responsiveness */
+    height: auto; /* Allows height to adjust dynamically */
+    padding: 12px; /* Reduced padding */
+    border-radius: 16px; /* Slightly smaller corner rounding */
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly subtler shadow */
     transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -28,15 +29,14 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: center; /* Center text inside */
 }
 
 .qr-image {
-    max-width: 320px;
-    width: 100%;
-    height: auto;
-    border: none;
-    border-radius: 10px;
+    max-width: 260px; /* Reduced width for QR code */
+    width: 100%; /* Stays responsive */
+    height: auto; /* Ensures proportional resizing */
+    border-radius: 8px; /* Reduced corner rounding */
     object-fit: cover;
 }
 
@@ -48,33 +48,33 @@ html, body {
 }
 
 .improve {
-    font-weight: 700;
-    font-size: 22px;
-    color: #333333;
-    margin-top: 15px;
+    font-weight: 700; /* Make the text bold */
+    font-size: 20px; /* Slightly smaller text */
+    color: #333333; /* Darker color for better contrast */
+    margin-top: 12px;
 }
 
 .instruction {
-    font-weight: 400;
-    color: #555555;
-    font-size: 16px;
-    margin-top: 10px;
+    font-weight: 400; /* Normal font weight */
+    color: #555555; /* Slightly darker gray for visibility */
+    font-size: 14px; /* Slightly smaller text */
+    margin-top: 8px;
 }
 
 @media (max-width: 768px) {
     .container {
-        width: 90%;
-        padding: 12px;
+        width: 90%; /* Keeps responsiveness for small screens */
+        padding: 10px;
     }
 
     .qr-image {
-        width: 100%;
+        max-width: 100%;
         height: auto;
     }
 
     .improve, .instruction {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 8px;
+        margin-right: 8px;
     }
 }
 
