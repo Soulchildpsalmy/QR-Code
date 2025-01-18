@@ -1,68 +1,94 @@
 html, body {
-    height: 100%; /* Ensure the body takes the full height */
-    margin: 0; /* Remove default margin */
-    display: flex; /* Enable flexbox on the body */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    background-color: rgba(213, 225, 239, 1); /* Light blue background */
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(213, 225, 239, 1);
 }
 
 .container {
-    height: 499px;
-    width: 320px;
+    max-width: 320px;
+    width: 90%;
     padding: 16px;
     border-radius: 20px;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .qr-code-component {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Center text inside */
+    text-align: center;
 }
 
 .qr-image {
-    height: 320px;
-    width: 320px;
+    max-width: 320px;
+    width: 100%;
+    height: auto;
     border: none;
     border-radius: 10px;
     object-fit: cover;
 }
 
-.improve,.instruction {
+.improve, .instruction {
     font-family: "Outfit", serif;
-   
     margin-left: 20px;
     margin-right: 20px;
+    line-height: 1.4;
 }
 
 .improve {
-    font-weight: 700; /* Make the text bold */
+    font-weight: 700;
     font-size: 22px;
-    color: #4A4A4A; /* Darker text color for better readability */
+    color: #333333;
     margin-top: 15px;
 }
 
 .instruction {
-    font-weight: 400; /* Normal font weight */
-    color: gray;
+    font-weight: 400;
+    color: #555555;
     font-size: 16px;
-   
     margin-top: 10px;
 }
+
 @media (max-width: 768px) {
     .container {
         width: 90%;
-        height: auto;
+        padding: 12px;
     }
 
     .qr-image {
         width: 100%;
         height: auto;
+    }
+
+    .improve, .instruction {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 350px;
+        padding: 20px;
+    }
+
+    .improve {
+        font-size: 24px;
+    }
+
+    .instruction {
+        font-size: 18px;
     }
 }
